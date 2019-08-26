@@ -1,0 +1,27 @@
+<h1>Tiendas</h1>
+<div class="container">
+    <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Ubicación</th>
+        <th>Última Actualización</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Java - for (Todo todo: todos) {-->
+      <tr *ngFor="let todo of todos">
+        <td>{{todo.description}}</td>
+        <td>{{todo.targetDate | date | uppercase}}</td>
+        <td>{{todo.done}}</td>
+        <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
+        <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>  
+  <div class="row"><button (click)="addTodo()" class="btn btn-success">Add</button></div>
+</div>
