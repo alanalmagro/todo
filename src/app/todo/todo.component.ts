@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { }
-
+  
   
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -27,7 +27,7 @@ export class TodoComponent implements OnInit {
         .subscribe(
           data => {
             this.todo = data
-            // console.log(data)
+             //console.log(data)
           }
         )
     }
@@ -40,7 +40,7 @@ export class TodoComponent implements OnInit {
       this.todoService.createTodo('Alan', this.todo)
         .subscribe(
           data => {
-            console.log(data)
+            //console.log(data)
             this.router.navigate(['todos'])
           }
 

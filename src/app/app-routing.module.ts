@@ -10,6 +10,8 @@ import { TodoComponent } from './todo/todo.component';
 import { IndexComponent } from './index/index.component';
 import { ListaTiendasComponent } from './lista-tiendas/lista-tiendas.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
+import { TiendaComponent } from './tienda/tienda.component';
+import { ProductoComponent } from './producto/producto.component';
 
 //welcome
 const routes: Routes = [
@@ -21,6 +23,9 @@ const routes: Routes = [
   {path:'todos', component:ListTodosComponent, canActivate:[RouteGuardService]},
   {path:'logout', component:LogoutComponent, canActivate:[RouteGuardService]},
   {path:'todos/:id', component:TodoComponent , canActivate:[RouteGuardService]},
+  {path:'tiendas/:id', component:TiendaComponent , canActivate:[RouteGuardService]},
+  {path:'productos/:id', component:ProductoComponent , canActivate:[RouteGuardService]},
+  {path:'index', component:IndexComponent , canActivate:[RouteGuardService]},
   {path:'**', component:ErrorComponent, canActivate:[RouteGuardService] }
 
 ];

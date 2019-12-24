@@ -19,6 +19,8 @@ import { TiendaComponent } from './tienda/tienda.component';
 import { HeaderComponent } from './header/header.component';
 import { ListaTiendasComponent } from './lista-tiendas/lista-tiendas.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
+import { ProductoComponent } from './producto/producto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -36,13 +38,15 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
     TiendaComponent,
     HeaderComponent,
     ListaTiendasComponent,
-    ListaProductosComponent
+    ListaProductosComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
      {provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi:true  }

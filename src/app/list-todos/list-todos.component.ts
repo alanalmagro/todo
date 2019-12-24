@@ -60,7 +60,7 @@ message: String
   refreshTodos(){
     this.todoService.retrieveAllTodos('Alan').subscribe(
       response => {
-        console.log(response);
+        //console.log(response);
         this.todos = response;
       }
     )
